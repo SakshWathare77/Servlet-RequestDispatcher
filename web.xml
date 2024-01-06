@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  
+  <display-name>ServletProject</display-name>
+  <welcome-file-list>
+   <welcome-file>login.html</welcome-file>
+    <!--  <welcome-file>index.html</welcome-file> -->
+     <!--  <welcome-file>form.html</welcome-file>  -->
+     
+   </welcome-file-list>
+  
+  <!-- declaring servlets -->
+  <!-- 1).http declaration--> 
+  
+  <servlet>
+  <servlet-name>myservlet1</servlet-name>
+  <servlet-class>com.servlet.Servletdemo</servlet-class>
+  </servlet>
+  
+  <!-- 2)servlet interface declaration -->
+  <servlet>
+  <servlet-name>myservlet2</servlet-name>
+  <servlet-class>com.servlet.Servlet_interfacedemo</servlet-class>
+  </servlet>
+  
+  <!-- 3)Generic servlet declaration -->
+  <servlet>
+  <servlet-name>myservlet3</servlet-name>
+  <servlet-class>com.servlet.Servlet_genericdemo</servlet-class>
+  </servlet>
+   <!-- Mapping servlet -->
+  <servlet-mapping>
+  <servlet-name>myservlet1</servlet-name>
+  <url-pattern>/httpservlet</url-pattern> 
+   </servlet-mapping>
+   
+    <servlet-mapping>
+  <servlet-name>myservlet2</servlet-name>
+  <url-pattern>/interface</url-pattern> 
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>myservlet3</servlet-name>
+  <url-pattern>/generic</url-pattern>
+  </servlet-mapping>
+  
+  
+  <!-- registration form -->
+  <servlet>
+  <servlet-name>form</servlet-name>
+  <servlet-class>com.formProj.Form</servlet-class>
+  </servlet>
+  <servlet>
+  <servlet-name>details</servlet-name>
+  <servlet-class>com.formProj.Details_form</servlet-class>
+  </servlet>
+  
+  <!-- Mapping for form -->
+  <servlet-mapping>
+  <servlet-name>form</servlet-name>
+  <url-pattern>/registerform</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  <servlet-name>details</servlet-name>
+  <url-pattern>/details</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Login HttpSession -->
+    
+  <servlet>
+  <servlet-name>login</servlet-name>
+  <servlet-class>com.SessionTracking.HttpSession_login</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>login</servlet-name>
+  <url-pattern>/servlet1</url-pattern>
+  </servlet-mapping>
+  
+  
+   <servlet>
+  <servlet-name>login2</servlet-name>
+  <servlet-class>com.SessionTracking.SecondLogin</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>login2</servlet-name>
+  <url-pattern>/servlet2</url-pattern>
+  </servlet-mapping>
+  
+  
+
+
+</web-app>
